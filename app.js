@@ -3,7 +3,6 @@
 let amigos = [];
 let numeroGenerado;
 let numeroGeneradoAnterior = null;
-let intentos = 0;
 
 function agregarAmigo() {
 	//console.log("pruebo agregar amigo");
@@ -53,7 +52,7 @@ function sortearAmigo() {
 				numeroGenerado =  Math.floor(Math.random()*cantidadAmigos);
 				//console.log(numeroGenerado);				
 			}			
-			numeroGeneradoAnterior = numeroGenerado			
+			numeroGeneradoAnterior = numeroGenerado;
 			let amigoSorteado = amigos[numeroGenerado];
 			//console.log(amigoSorteado);
 			let resultado = document.querySelector("#resultado");
@@ -61,6 +60,7 @@ function sortearAmigo() {
 		} else {
 			let resultado = document.querySelector("#resultado");
 			resultado.innerHTML = amigos[0];
+			numeroGeneradoAnterior = amigos[0];
 		}
 	}
 	return;
