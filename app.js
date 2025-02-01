@@ -15,7 +15,7 @@ function agregarAmigo() {
 		amigos.push(amigo);
 		console.log(amigos)
 	} else {
-		alert("Por favor, inserte un nombre.")
+		alert("Por favor, inserte un nombre válido.")
 	}
 	limpiarCaja();
 	actualizarListaAmigos();
